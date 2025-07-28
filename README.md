@@ -29,7 +29,8 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <h2>Installation Steps</h2>
 
 1. Create an Azure Virtual Machine using Windows 10 Pro, with 4 vCPUs.
-- Name: osticket-vm - Username: labuser - Password: osTicketPassword1!
+
+   Name: osticket-vm - Username: labuser - Password: osTicketPassword1!
 
 <p><img width="2553" height="1395" alt="osticket picture 1" src="https://github.com/user-attachments/assets/5edbe1a4-cb2c-493e-bbd6-2c76a88532cc" />
 
@@ -39,19 +40,30 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <img width="2559" height="1439" alt="Screenshot 2025-07-17 123220" src="https://github.com/user-attachments/assets/35b31117-be87-4f37-add3-d9caf6afc989" />
 
 3. Within the VM (osticket-vm), download the osTicket-Installation-Files.zip and unzip it onto your desktop. The folder should be called “osTicket-Installation-Files”
-- We will use the files in this folder to install osTicket and some of the dependencies.
+
+   We will use the files in this folder to install osTicket and some of the dependencies.
 
 <p><img width="2559" height="1439" alt="Screenshot 2025-07-17 134217" src="https://github.com/user-attachments/assets/b667d4bb-6b36-492e-833a-99396821cab7" />
 
 4. Install / Enable IIS in Windows WITH CGI
 World Wide Web Services -> Application Development Features -> [X] CGI
 
-
-
 <img width="2559" height="1439" alt="Screenshot 2025-07-17 134848" src="https://github.com/user-attachments/assets/960d297b-8a4a-4694-85f0-d8d8e66be026" />
-hi
+
+5. From the “osTicket-Installation-Files” folder, install PHP Manager for IIS (PHPManagerForIIS_V1.5.0.msi) 
+
+   From the “osTicket-Installation-Files” folder install the Rewrite Module (rewrite_amd64_en-US.msi)
+
+
 <img width="2559" height="1439" alt="Screenshot 2025-07-17 135317" src="https://github.com/user-attachments/assets/17291e50-a3f3-4445-8acc-1c45e19f6366" />
-g
+
+6. Create the directory C:\PHP
+
+   From the “osTicket-Installation-Files” folder, unzip PHP 7.3.8 (php-7.3.8-nts-Win32-VC15-x86.zip) into the “C:\PHP” folder
+
+   From the “osTicket-Installation-Files” folder, install VC_redist.x86.exe.
+
+
 <img width="2559" height="1439" alt="Screenshot 2025-07-17 135538" src="https://github.com/user-attachments/assets/7009f388-da02-4597-a917-a07e02da53b8" />
 g
 <img width="2559" height="1439" alt="Screenshot 2025-07-17 135954" src="https://github.com/user-attachments/assets/1a379c31-7ac4-488b-bf72-d1e626b0d057" />
