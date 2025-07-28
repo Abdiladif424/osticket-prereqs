@@ -52,7 +52,7 @@ World Wide Web Services -> Application Development Features -> [X] CGI
 
 5. From the “osTicket-Installation-Files” folder, install PHP Manager for IIS (PHPManagerForIIS_V1.5.0.msi) 
 
-   From the “osTicket-Installation-Files” folder install the Rewrite Module (rewrite_amd64_en-US.msi)
+   From the “osTicket-Installation-Files” folder, install the Rewrite Module (rewrite_amd64_en-US.msi)
 
 
 <img width="2559" height="1439" alt="Screenshot 2025-07-17 135317" src="https://github.com/user-attachments/assets/17291e50-a3f3-4445-8acc-1c45e19f6366" />
@@ -65,13 +65,55 @@ World Wide Web Services -> Application Development Features -> [X] CGI
 
 
 <img width="2559" height="1439" alt="Screenshot 2025-07-17 135538" src="https://github.com/user-attachments/assets/7009f388-da02-4597-a917-a07e02da53b8" />
-g
+
+
+7. From the “osTicket-Installation-Files” folder, install MySQL 5.5.62 (mysql-5.5.62-win32.msi)
+Typical Setup -> Launch Configuration Wizard (after install) -> Standard Configuration ->
+
+   Username: root
+
+   Password: root
+
 <img width="2559" height="1439" alt="Screenshot 2025-07-17 135954" src="https://github.com/user-attachments/assets/1a379c31-7ac4-488b-bf72-d1e626b0d057" />
-r
+
+8. Open IIS as an Admin
+
+   Register PHP from within IIS (PHP Manager -> C:\PHP\php-cgi.exe)
+
+   Reload IIS (Open IIS, Stop, and Start the server)
+
 <img width="2559" height="1439" alt="Screenshot 2025-07-17 140438" src="https://github.com/user-attachments/assets/287bacff-e7ba-4733-a5d5-1213ea8699bb" />
-g
+
+9. Install osTicket v1.15.8
+
+   From the “osTicket-Installation-Files” folder, unzip “osTicket-v1.15.8.zip” and copy the “upload” folder into “c:\inetpub\wwwroot”
+
+   Within “c:\inetpub\wwwroot”, rename “upload” to “osTicket”
+
 <img width="2559" height="1439" alt="Screenshot 2025-07-17 141909" src="https://github.com/user-attachments/assets/49464ca4-5697-4450-b78f-add79f4d7b27" />
-e
+
+10. Reload IIS (Open IIS, Stop, and Start the server)
+
+   Go to sites -> Default -> osTicket
+  
+   On the right, click “Browse *:80”
+
+   - Note that some extensions are not enabled
+
+   -Go back to IIS, sites -> Default -> osTicket
+
+   -Double-click PHP Manager
+
+   -Click “Enable or disable an extension”
+
+   -Enable: php_imap.dll
+
+   -Enable: php_intl.dll
+
+   -Enable: php_opcache.dll
+
+   -Refresh the osTicket site in your browser, and observe the changes
+
 <img width="2559" height="1439" alt="Screenshot 2025-07-17 142644" src="https://github.com/user-attachments/assets/e0c2b279-43f7-4616-ad2b-93a61cc4759a" />
 r
 <img width="2559" height="1439" alt="Screenshot 2025-07-17 144105" src="https://github.com/user-attachments/assets/1c98bd1b-a73d-4b0f-867a-6d4a6166f283" />
