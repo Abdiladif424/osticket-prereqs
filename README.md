@@ -20,11 +20,11 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <h2>List of Prerequisites</h2>
 
-- Item 1
-- Item 2
-- Item 3
-- Item 4
-- Item 5
+- Create Azure Virtual machine
+- Install OsTicket Installation Files
+- Install MySQL 5.5.62
+- Register PHP within IIS/ enable or disable extensions
+- Install HeidiSQL to create a new database/session
 
 <h2>Installation Steps</h2>
 
